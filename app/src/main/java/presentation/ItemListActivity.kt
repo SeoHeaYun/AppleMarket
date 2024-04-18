@@ -31,6 +31,8 @@ import data.ItemData
 import data.SingletonData
 import presentation.DetailActivity.Companion.EXTRA_ITEM
 
+//
+
 class ItemListActivity : AppCompatActivity() {
 
     // 뷰바인딩
