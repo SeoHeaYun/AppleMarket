@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <View
+        android:id="@+id/item_view"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_bgr"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toBottomOf="@+id/item_view"
+        app:layout_constraintEnd_toEndOf="@+id/item_view"
+        app:layout_constraintStart_toStartOf="@+id/item_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/item_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="상품이름" />
+
+
+    <TextView
+        android:id="@+id/item_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/item_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_name"
+        tools:text="주소" />
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/item_adress"
+        app:layout_constraintTop_toBottomOf="@+id/item_adress"
+        tools:text="50,000"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_price"
+        app:layout_constraintStart_toEndOf="@id/item_price"
+        app:layout_constraintTop_toTopOf="@+id/item_price"
+        android:text="원"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
+
+
+
+    <ImageView
+        android:id="@+id/item_heart"
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:src="@drawable/empty_heart"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/item_heart_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_heart"
+        app:layout_constraintStart_toEndOf="@+id/item_heart"
+        app:layout_constraintTop_toTopOf="@+id/item_heart"
+        tools:text="50" />
+
+    <ImageView
+        android:id="@+id/item_chat"
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:src="@drawable/chat"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_chat_num" />
+
+    <TextView
+        android:id="@+id/item_chat_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_chat"
+        app:layout_constraintStart_toEndOf="@+id/item_chat"
+        app:layout_constraintTop_toTopOf="@+id/item_chat"
+        app:layout_constraintEnd_toEndOf="@id/item_heart"
+        tools:text="50" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
